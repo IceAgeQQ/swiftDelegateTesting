@@ -28,9 +28,9 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let VC = storyboard.instantiateViewControllerWithIdentifier("viewcontroller") as! ViewController
-        VC.delegate = self
+ //       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+ //       let VC = storyboard.instantiateViewControllerWithIdentifier("viewcontroller") as! ViewController
+ //       VC.delegate = self
         
         let filemgr = NSFileManager.defaultManager()
         let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -101,6 +101,6 @@ class TestViewController: UIViewController {
 
 extension TestViewController:viewControllerDelegate {
     func viewcontrollerdelegate(setviewcontrollerdelegate: ViewController) {
-        self.trydelegate = setviewcontrollerdelegate.address.text!
+        self.trydelegate = setviewcontrollerdelegate.name.text!
     }
 }

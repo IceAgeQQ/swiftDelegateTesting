@@ -130,7 +130,6 @@
                                 </constraints>
                                 <state key="normal" title="NextView"/>
                                 <connections>
-                                    <action selector="nextViewandDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="40D-W5-P1i"/>
                                     <segue destination="ZE8-Zh-XBG" kind="show" identifier="showTestSegue" id="fge-LH-Owv"/>
                                 </connections>
                             </button>
@@ -311,10 +310,10 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="ddz-9b-ags"/>
                                 <include reference="SJX-0h-6D0"/>
                                 <exclude reference="Z93-K3-1lC"/>
                                 <include reference="sCn-an-eHv"/>
+                                <exclude reference="ddz-9b-ags"/>
                             </mask>
                         </variation>
                     </view>

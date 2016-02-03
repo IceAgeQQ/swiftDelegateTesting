@@ -122,7 +122,8 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         
                 testViewController.address = address.text!
                 testViewController.phone = phone.text!
-                
+                self.delegate = testViewController
+                self.delegate?.viewcontrollerdelegate(self)
             }
         }
     }
