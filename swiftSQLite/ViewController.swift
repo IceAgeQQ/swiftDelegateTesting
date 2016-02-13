@@ -30,7 +30,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let docsDir = dirPaths[0]
         databasePath = docsDir.stringByAppendingPathComponent("contacts.db")
-//        print(databasePath)
+
         //If the file does not yet exist the code creates the database by creating an FMDatabase instance initialized with the database file path. If the database creation is successful it is then opened via a call to the open method of the new database instance.
         if !filemgr.fileExistsAtPath(databasePath as String) {
             let contactDB = FMDatabase(path: databasePath as String)
@@ -47,6 +47,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
                 print("Error: \(contactDB.lastErrorMessage())")
             }
         }
+     
     }
 
     @IBAction func saveData(sender: AnyObject) {
@@ -111,10 +112,6 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func nextViewandDelegate(sender: AnyObject) {
-        
-        self.delegate?.viewcontrollerdelegate(self)
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTestSegue" {
