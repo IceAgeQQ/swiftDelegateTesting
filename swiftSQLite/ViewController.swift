@@ -47,11 +47,12 @@ class ViewController: UIViewController ,UITextFieldDelegate {
                 print("Error: \(contactDB.lastErrorMessage())")
             }
         }
-
         
         print("hello world")///commit 1
         print("hello 2 world") // commit 2
         print("hello 3 world")// commit 3
+        print("")
+
     }
 
     @IBAction func saveData(sender: AnyObject) {
